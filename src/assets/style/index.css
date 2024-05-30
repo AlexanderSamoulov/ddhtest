@@ -1,0 +1,13 @@
+html {
+  font-size: 0.9vw;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+    height: 100vh;
+}
+
+@media (min-width: 990px) {
+  html {
+    font-size: 9px;
+  }
+}
+
