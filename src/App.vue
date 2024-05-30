@@ -7,9 +7,9 @@ const sectionName = ref<null | string>(null)
 const setTime = ref(getTime())
 const setDate = ref<Date>(new Date())
 
-/* setInterval(() => {
+setInterval(() => {
   setDate.value = new Date()
-}, 30000) */
+}, 30000)
 
 const timeInHeader = computed(() => {
   return getTimeInHeader(setDate.value)

@@ -21,16 +21,15 @@
 import EventBox from './../components/EventBox.vue'
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import { timeToMinutes, minutesToTime, dateToMin } from '../helpers/Time'
+import { timeToMinutes, dateToMin } from '../helpers/Time'
 import type { Data, Event } from './../types/interfaces'
 const props = defineProps({
-  time: String,
   date: Date
 })
 
 const route = useRoute()
 const data = ref<null | Data[]>(null)
-/* const currentEvents = ref<null|Event[]>(null) */
+
 function fetchData(): void {
   fetch(`json/report_${route.params.id}.json`)
     .then((res) => res.json())
